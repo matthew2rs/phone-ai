@@ -1,0 +1,7 @@
+{ "name": "bad_number_rejected", "description": "A garbled callback number is never saved; a good one then updates the SAME message.",
+  "steps": [
+    { "say": "Call me on 0491 570" },
+    { "tool": "capture_message", "args": { "caller_name": "Sam", "topic": "quote", "caller_confirmed": true, "callback_number": "0491 570" }, "expect": { "saved": false, "delivered": 0 } },
+    { "tool": "capture_message", "args": { "caller_name": "Sam", "topic": "quote", "caller_confirmed": true, "callback_number": "0491 570 156" }, "expect": { "saved": true, "callbackNumber": "+61491570156" } },
+    { "tool": "capture_message", "args": { "caller_name": "Sam", "topic": "quote", "caller_confirmed": true, "callback_email": "sam@example.com" }, "expect": { "saved": true, "updated": true, "callbackNumber": "+61491570156" } }
+  ] }

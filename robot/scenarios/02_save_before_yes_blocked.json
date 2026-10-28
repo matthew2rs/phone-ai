@@ -1,0 +1,5 @@
+{ "name": "save_before_yes_blocked", "description": "Model tries to save before the caller said yes: must NOT save.",
+  "steps": [
+    { "say": "Message for the team please, I'm Alex Doe about my delivery." },
+    { "tool": "capture_message", "args": { "caller_name": "Alex Doe", "topic": "delivery", "caller_confirmed": false }, "expect": { "saved": false, "delivered": 0, "sayIncludes": "read the whole message back" } }
+  ] }

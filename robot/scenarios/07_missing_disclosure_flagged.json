@@ -1,0 +1,6 @@
+{ "name": "missing_disclosure_flagged", "description": "A transcript without the AI disclosure is recorded as disclosed=false.",
+  "steps": [
+    { "say": "Hi there" },
+    { "tool": "capture_message", "args": { "caller_name": "Kim", "topic": "hours", "caller_confirmed": true }, "expect": { "saved": true } },
+    { "end": { "transcript": "AI: Hello, how can I help? User: Hi there" }, "expect": { "disclosed": false } }
+  ] }

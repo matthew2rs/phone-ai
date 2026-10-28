@@ -1,0 +1,5 @@
+{ "name": "no_message_safety_net", "description": "AI answered a real call, nothing saved: a flagged record is made and delivered.",
+  "steps": [
+    { "say": "Hello? ... never mind" },
+    { "end": { "summary": "Caller hung up before leaving details." }, "expect": { "unsavedFlag": true, "messageSaved": false, "delivered": 1 } }
+  ] }

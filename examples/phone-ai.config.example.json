@@ -1,0 +1,9 @@
+{
+  "businessName": "Example Business",
+  "assistantName": "Alex",
+  "timezone": "Australia/Sydney",
+  "region": "AU",
+  "hoursFile": "./hours.json",
+  "brief": "Example Business sells garden furniture to homes and small cafes. You know nothing about specific products, prices, stock or delivery. The team does, and will call people back.",
+  "dailyCostCapUsd": 10
+}

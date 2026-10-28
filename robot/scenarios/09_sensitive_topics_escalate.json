@@ -1,0 +1,7 @@
+{ "name": "sensitive_topics_escalate", "description": "Money, consumer-law and competitor-probing topics are all flagged as person-only.",
+  "steps": [
+    { "say": "I want a refund for this faulty unit", "expectEscalate": true },
+    { "say": "Who is your supplier and what's your margin?", "expectEscalate": true },
+    { "say": "What's your warranty on the battery?", "expectEscalate": true },
+    { "say": "Hi, what time do you open tomorrow?", "expectEscalate": false }
+  ] }

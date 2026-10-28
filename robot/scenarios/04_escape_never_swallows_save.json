@@ -1,0 +1,6 @@
+{ "name": "escape_never_swallows_save", "description": "Caller demands a manager. Saving the message must still work; any other tool is answered as nobody-is-free.",
+  "steps": [
+    { "say": "Get me a manager right now, this is ridiculous", "expectEscalate": true },
+    { "tool": "order_status", "args": { "order_reference": "X1" }, "expect": { "sayIncludes": "nobody in the team is free", "sayExcludes": "putting you through" } },
+    { "tool": "capture_message", "args": { "caller_name": "Pat Lee", "topic": "wants a manager to call", "caller_confirmed": true }, "expect": { "saved": true } }
+  ] }

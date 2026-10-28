@@ -1,0 +1,6 @@
+{ "name": "happy_path", "description": "Read back, yes, save, then the end-of-call is clean.",
+  "steps": [
+    { "say": "Hi, it's Sam Jones. I want to know if you have the 200 litre tank in stock." },
+    { "tool": "capture_message", "args": { "caller_name": "Sam Jones", "topic": "asking about a 200 litre tank", "caller_confirmed": true }, "expect": { "saved": true, "delivered": 1, "sayIncludes": "as soon as they can" } },
+    { "end": {}, "expect": { "messageSaved": true, "disclosed": true, "unsavedFlag": false, "passedOnFlagged": false } }
+  ] }

@@ -1,0 +1,4 @@
+{ "name": "hours_from_config_only", "description": "Opening hours come from config via the tool, never from the model.",
+  "steps": [
+    { "tool": "opening_hours", "args": {}, "expect": { "status": "ok", "sayIncludes": "next open" } }
+  ] }

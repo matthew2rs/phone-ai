@@ -1,0 +1,15 @@
+# systemd unit (Linux). Copy to /etc/systemd/system/phone-ai.service, edit paths, then:
+#   sudo systemctl enable --now phone-ai
+[Unit]
+Description=phone-ai webhook server
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/phone-ai
+EnvironmentFile=/opt/phone-ai/.env
+ExecStart=/usr/bin/node node_modules/.bin/tsx src/server.ts
+Restart=on-failure
+User=phoneai
+
+[Install]
+WantedBy=multi-user.target

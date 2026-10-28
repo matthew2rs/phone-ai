@@ -1,0 +1,6 @@
+{ "name": "passed_on_before_save", "description": "The assistant claims 'passed that on' BEFORE the save succeeded: must be flagged.",
+  "steps": [
+    { "say": "It's Jo Park about an invoice." },
+    { "tool": "capture_message", "args": { "caller_name": "Jo Park", "topic": "invoice", "caller_confirmed": true }, "expect": { "saved": true } },
+    { "end": { "extraMessages": [ { "role": "bot", "message": "I've passed that on to the team.", "secondsFromStart": -5 } ] }, "expect": { "passedOnFlagged": true } }
+  ] }

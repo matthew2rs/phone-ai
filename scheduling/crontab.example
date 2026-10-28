@@ -1,0 +1,2 @@
+# Daily review email at 8am server time. Adjust the path.
+0 8 * * * cd /opt/phone-ai && node --env-file=.env node_modules/.bin/tsx src/cli/digest.ts >> data/digest.log 2>&1
